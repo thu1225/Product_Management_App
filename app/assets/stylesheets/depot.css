@@ -1,0 +1,44 @@
+#product_list table tr td {
+    padding: 5px;
+    vertical-align: top;
+}
+ 
+#product_list .list_image {
+    width: 200px;
+    height: 100px;
+}
+
+
+#product_list .list_title {
+    width: 100%;
+}
+ 
+#product_list .llist_title dl {
+    margin: 0;
+}
+ 
+#product_list .list_title dt {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: larger;
+}
+ 
+#product_list .list_title dd {
+    margin: 0;
+}
+
+#product_list .list_actions {
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1em;
+
+}
+ 
+#product_list .list_line_even {
+    background: #faf8f8;
+}
+ 
+#product_list .list_line_odd {
+   background: #faf8f8;
+}
