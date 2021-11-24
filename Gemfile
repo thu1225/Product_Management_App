@@ -54,4 +54,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "ransack", "~> 2.4"
+gem "ransack", "~> 2.4"  
+gem 'kaminari'       # gíup phân trang
+gem 'bootstrap-kaminari-views' # giao diện đẹp cho phân trang
