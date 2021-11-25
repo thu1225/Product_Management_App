@@ -6,9 +6,8 @@ class ProductsController < ApplicationController
     
     @q = Product.ransack(params[:q])
     @products = @q.result
-    @products = Product.all.page(params[:page]).per(5) 
+    @products= Product.page(params[:page]).per(3)
   end
-
 
   # GET /products/1 or /products/1.json
   def show
@@ -68,7 +67,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :sku, :price, :quantity, :image_url, :term)
+      params.require(:product).permit(:title, :sku, :price, :quantity, :image_url, :term, :category_id)
       
     end
 end

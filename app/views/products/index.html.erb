@@ -1,6 +1,7 @@
+<h1 class="text-left" style="color: black;">All Products</h1>
+<div class="col-md-10 col-lg-offset-1">
 
 <div id="product_list">
-    <h1>All Products</h1>
     <%= search_form_for @q do |f| %>
        <b> <%= f.label 'SEARCH FOR' %> </b>
         <%= f.search_field :title_cont %>
@@ -38,5 +39,6 @@
 </div>
  
 <br />
-<%= paginate @products, theme: 'twitter-bootstrap-3' %>
-<%= link_to 'New product', new_product_path %>
+    <%= will_paginate @products %>
+    <%= link_to 'New product', new_product_path %>
+</div>

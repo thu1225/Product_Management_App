@@ -5,4 +5,5 @@ class Product < ApplicationRecord
     validates :image_url, :format => {
         :with => %r{\.(gif|jpg|png)\Z}i,
         :message => 'Chi nhan file GIF, JPG, PNG'}
+    belongs_to :category
 end
