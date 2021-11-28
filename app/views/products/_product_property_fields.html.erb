@@ -1,8 +1,8 @@
     <%= f.label :version %>
     <%= f.text_field :version %>
-
     <%= f.label :imageproduct_url%>
     <%= f.text_field :imageproduct_url %>
-
     <%= f.label :in_stock %>
     <%= f.text_field :in_stock %>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "Remove", "#", class: 'remove-fields' %>
