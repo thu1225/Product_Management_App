@@ -3,9 +3,6 @@ class ProductsController < ApplicationController
 
   # GET /products or /products.json
   def index 
-    
-    @q = Product.ransack(params[:q])
-    @products = @q.result
     @products= Product.page(params[:page]).per(2)
   end
 
@@ -16,6 +13,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @product.product_properties.build
   end
 
   # GET /products/1/edit
@@ -67,7 +65,6 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:title, :sku, :price, :quantity, :image_url, :term, :category_id)
-      
+      params.require(:product).permit(:title, :sku, :price, :quantity, :image_url, :term, :category_id,product_properties_attributes: [:id, :version, :imageproduct_url, :in_stock])      
     end
 end

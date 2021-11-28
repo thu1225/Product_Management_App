@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :product_properties
   resources :categories
   resources :products
   # Get /home

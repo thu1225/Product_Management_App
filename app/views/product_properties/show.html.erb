@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @product_property.version %>
+</p>
+
+<p>
+  <strong>Imageproduct url:</strong>
+  <%= @product_property.imageproduct_url %>
+</p>
+
+<p>
+  <strong>In stock:</strong>
+  <%= @product_property.in_stock %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @product_property.product_id %>
+</p>
+
+<%= link_to 'Edit', edit_product_property_path(@product_property) %> |
+<%= link_to 'Back', product_properties_path %>

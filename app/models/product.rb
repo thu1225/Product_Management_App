@@ -6,4 +6,6 @@ class Product < ApplicationRecord
         :with => %r{\.(gif|jpg|png)\Z}i,
         :message => 'Chi nhan file GIF, JPG, PNG'}
     belongs_to :category
+    has_many :product_properties
+    accepts_nested_attributes_for :product_properties
 end

@@ -22,10 +22,18 @@
 </p>
 
 <p>
-      <div class='field'>
-        <%= image_tag(@product.image_url, style: 'width: 900px;
-    height: 500px')%>
-      </div>
-  </p> 
+  <strong> Available Properties: <%= @product.product_properties.count %> </strong>
+
+ <% @product.product_properties.each do |property| %>
+</p>
+  
+    <%= property.version %>
+    <%= property.imageproduct_url %>
+    <%= property.in_stock %>
+<p>
+<% end %>
+
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
