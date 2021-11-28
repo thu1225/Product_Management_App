@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     
     @q = Product.ransack(params[:q])
     @products = @q.result
-    @products= Product.page(params[:page]).per(3)
+    @products= Product.page(params[:page]).per(2)
   end
 
   # GET /products/1 or /products/1.json

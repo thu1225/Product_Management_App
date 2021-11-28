@@ -1,13 +1,6 @@
 <h1 class="text-left" style="color: black;">All Products</h1>
 <div class="col-md-10 col-lg-offset-1">
-
-<div id="product_list">
-    <%= search_form_for @q do |f| %>
-       <b> <%= f.label 'SEARCH FOR' %> </b>
-        <%= f.search_field :title_cont %>
-        <%= f.submit %>
-    <% end %>
-
+   <div id="product_list">
     <table>
     <% @products.each do |product| %>
         <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
